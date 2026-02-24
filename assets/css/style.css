@@ -1,0 +1,343 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0f1c;
+    color: #e2e8f0;
+    font-family: 'Google Sans Code', monospace, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    background-color: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    color: #22d3ee;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22d3ee;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.status-cash {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    background-color: rgba(34, 238, 122, 0.1);
+    border: 1px solid rgba(34, 238, 122, 0.3);
+    color: #22ee7a;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.status-dot-cash {
+    width: 8px;
+    height: 8px;
+    background-color: #22ee7a;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(to right, #22d3ee, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #94a3b8;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.description {
+    max-width: 600px;
+    margin: 20px auto 0;
+    color: #94a3b8;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.card {
+    background-color: rgba(15, 23, 42, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #22d3ee;
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+.icon-box {
+    background-color: rgba(6, 182, 212, 0.1);
+    display: inline-block;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border-top: 1px solid #1e293b;
+    padding-top: 10px;
+}
+
+.price strong {
+    color: #22d3ee;
+}
+
+/* =========================
+   CARD EM BREVE
+========================= */
+
+.coming-soon {
+    border: 1px dashed rgba(34, 238, 122, 0.4);
+    background-color: rgba(34, 238, 122, 0.05);
+    text-align: center;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.coming-soon:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(34, 238, 122, 0.2);
+}
+
+.coming-soon h3 {
+    color: #22ee7a;
+}
+
+.coming-soon .price span {
+    color: #22ee7a;
+    font-weight: bold;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-item:hover {
+    color: #22ee7a;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding: 40px 60px;
+    background: #0a0f1c;
+    position: relative;
+    opacity: 0.6;
+}
+
+.contact {
+    color: #22d3ee;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.instagram {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Lado esquerdo */
+.footer-left {
+    display: flex;
+    gap: 10px;
+}
+
+/* Bolinhas estilo MacOS */
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-dot.red {
+    background: #ff5f56;
+}
+
+.status-dot.yellow {
+    background: #ffbd2e;
+}
+
+.status-dot.green {
+    background: #27c93f;
+}
+
+/* Lado direito */
+.footer-right {
+    text-align: right;
+}
+
+.footer-right h4 {
+    margin: 0 0 10px;
+}
+
+.contact {
+    color: #22d3ee;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.social-item svg {
+    width: 20px;
+    height: 20px;
+    stroke: #94a3b8;
+    transition: 0.3s;
+}
+
+.social-item:hover svg {
+    stroke: #22d3ee;
+}
+
+#copyright-text {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* =========================
+   FUNDO DECORATIVO
+========================= */
+
+.background-elements {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.symbol {
+    position: absolute;
+    font-size: 60px;
+    font-family: monospace;
+    opacity: 0.05;
+}
+
+.top-left { top: 20px; left: 20px; }
+.bottom-right { bottom: 40px; right: 40px; }
+.mid-right { top: 40%; right: 30%; }
+
+.bg-code {
+    position: absolute;
+    top: 100px;
+    left: 60%;
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #151a27;
+    line-height: 1.6;
+    filter: blur(1px);
+}
